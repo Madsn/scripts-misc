@@ -4,7 +4,9 @@ shows = {}
 # Track all the series that are located on the NAS
 nas_directories.each(){ |dir|
   Dir.entries(dir).each(){ |nas_show|
-    shows[nas_show] = dir + nas_show
+    if nas_show != ".." && nas_show != "."
+      shows[nas_show] = dir + nas_show
+    end
   }
 }
 puts shows
