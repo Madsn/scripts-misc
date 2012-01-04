@@ -69,5 +69,5 @@ for entry in songs:
     os.system("del {0}.flv".format(vid_id))
     collection.add(artist, song)
 
-print len(songs) + " new songs downloaded, " + old " songs already in collection"
+print "---------\n{0} new songs downloaded, {1} songs already in collection".format(len(songs), old)
 
