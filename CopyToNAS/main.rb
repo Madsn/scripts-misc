@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 nas_directories = ["Z:\\TV A-H\\", "Z:\\TV I-R\\", "Z:\\TV S-Z\\"]
-local_dir = "D:\\DL\\"
+local_dir = "G:\\DL\\"
 shows = {}
 # Track all the series that are located on the NAS
 nas_directories.each(){ |dir|
