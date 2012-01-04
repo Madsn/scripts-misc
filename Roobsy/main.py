@@ -65,9 +65,13 @@ for entry in songs:
     artist, song, vid_id = entry
     print "Downloading song: {0} - {1}".format(song, artist)
     os.system("python youtube_dl.py http://youtube.com/watch?v={0}".format(vid_id))
+for entry in songs:
+    print "Converting song: {0} - {1}".format(song, artist)
+    artist, song, vid_id = entry
     os.system("ffmpeg -i {0}.flv -ar 44100 -ab 160k -ac 2 \"{1} - {2}.mp3\"".format(vid_id, song, artist))
     os.system("del {0}.flv".format(vid_id))
     collection.add(artist, song)
+
 
 print "---------\n{0} new songs downloaded, {1} songs already in collection".format(len(songs), old)
 
